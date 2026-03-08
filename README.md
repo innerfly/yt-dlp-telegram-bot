@@ -75,7 +75,8 @@ Notes:
 ## Running the bot
 - python bot.py
 
-- Use a process manager (supervisor, systemd, docker, etc.) to keep the bot running.
+- Use a process manager (supervisor, systemd, docker, etc.) to keep the bot running. To run with supervisor:
+`sudo supervisorctl reread && sudo supervisorctl update && sudo supervisorctl restart yt-dlp-telegram-bot`
 
 The bot will start polling. In your Telegram client, message your bot `/v <youtube_url>`, and if the download succeeds, the bot replies with a public link like:
 https://files.example.com/Some_Title-VIDEOID.mp4
